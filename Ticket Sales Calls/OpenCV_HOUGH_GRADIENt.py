@@ -1,15 +1,12 @@
-/*
 
-Python code to determine how many tickets are sold and unsold. 
+#Python code to determine how many tickets are sold and unsold. 
 
-requires screenshot of the image with sold and unsold seats depicted as dots.
-This code uses the Hough Gradient algorithm from Open CV to detect and identify "circles" which rep seats in the stadium.
+#requires screenshot of the image with sold and unsold seats depicted as dots.
+#This code uses the Hough Gradient algorithm from Open CV to detect and identify "circles" which rep seats in the stadium.
 
-the meduim blur algorthim can be updated as needed.
-
+#the meduim blur algorthim can be updated as needed.
 
 
-*/
 
 
 import cv2
@@ -22,7 +19,7 @@ from google.colab.patches import cv2_imshow
 bcount = 0
 
   image = cv2.imread('xxx')
-// insert screenshot of venue map
+# insert screenshot of venue map
 blur = cv2.medianBlur(image, 4)
 gray = cv2.cvtColor(blur, cv2.COLOR_BGR2GRAY)
 thresh = cv2.threshold(gray,100,255, cv2.THRESH_BINARY_INV)[1]
@@ -44,7 +41,7 @@ cv2.waitKey()
 
 
      image = cv2.imread('xxxx')
-// insert screenshot of venue map
+# insert screenshot of venue map
 
 blur = cv2.medianBlur(image, 5)
 gray = cv2.cvtColor(blur, cv2.COLOR_BGR2GRAY)
